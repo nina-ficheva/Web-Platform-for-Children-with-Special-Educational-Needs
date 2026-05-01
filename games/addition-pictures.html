@@ -48,7 +48,7 @@
         </section>
         
         <div class="navigation-buttons">
-            <a href="../games/math-games.html" class="back-button"><i class="fas fa-arrow-left"></i> Обратно към математически игри</a>
+            <a href="math-games.html" class="back-button"><i class="fas fa-arrow-left"></i> Обратно към математически игри</a>
         </div>
         
         <section class="parents-section">
@@ -86,14 +86,25 @@
                         </ol>
                     </div>
                     <div class="game-area">
-                        <div class="addition-game">
-                            <div class="question-container">
-                                <div class="question-prompt">Колко предмета има общо?</div>
+                        <div class="score-container">Точки: <span id="score">0</span></div>
+                        <div class="progress-container">
+                            <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
+                        </div>
+                        <div class="addition-game" id="game-content" style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+                            <div class="question-container" style="text-align:center;">
+                                <div class="question-prompt" style="font-size:1.2em;font-weight:600;color:#35523a;margin-bottom:10px;">Колко предмета има общо?</div>
                                 <div class="items-container" id="items-container"></div>
                                 <div class="answers-container" id="answers-container"></div>
                                 <div class="feedback" id="feedback"></div>
                                 <button class="next-button" id="next-button">Следващ въпрос</button>
                             </div>
+                        </div>
+                        <div class="game-complete" id="game-complete">
+                            <h3>Браво! Приключи играта!</h3>
+                            <p>Ти се справи чудесно със събирането.</p>
+                            <div class="final-score"><span id="final-score">0</span>/10</div>
+                            <p id="final-message">Страхотно!</p>
+                            <button class="restart-button" id="restart-button">Играй отново</button>
                         </div>
                     </div>
                     <div class="navigation-buttons">
@@ -104,7 +115,7 @@
         </section>
         
         <div class="navigation-buttons">
-            <a href="../games/math-games.html" class="back-button"><i class="fas fa-arrow-left"></i> Обратно към математически игри</a>
+            <a href="math-games.html" class="back-button"><i class="fas fa-arrow-left"></i> Обратно към математически игри</a>
         </div>
         
         <section class="parents-section">
