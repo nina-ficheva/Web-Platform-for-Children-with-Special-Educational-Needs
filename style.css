@@ -1,0 +1,1175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #35523a;
+}
+
+body {
+    background-color: #f3f8f4;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    font-size: 16px;
+}
+
+header {
+    padding: 10px 20px;
+    background-color: #f3f8f4;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.logo-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    background-color: #5bb86b;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.logo-icon-container i {
+    font-size: 30px;
+    color: white;
+    padding: 0;
+}
+
+.logo-icon-container:hover {
+    transform: scale(1.1);
+    background-color: #35523a;
+}
+
+.site-logo {
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.site-logo:hover {
+    transform: scale(1.1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #5bb86b;
+    margin-bottom: 15px;
+    font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, sans-serif;
+    letter-spacing: 0.05em;
+}
+
+h1 {
+    text-align: center;
+    padding: 15px;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 17px;
+    margin-bottom: 15px;
+    line-height: 1.7;
+    padding: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #5bb86b;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #35523a;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #b6e2c6;
+    color: #35523a;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #5bb86b;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+#grad1 {
+  height: 200px;
+    background-color: #b6e2c6;
+    background-image: linear-gradient(to bottom right, #b6e2c6, #e2f7e1);
+}
+
+/* Навигация */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b6e2c6;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    margin: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #35523a;
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #1e2d1b;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #35523a;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    padding: 5px;
+}
+
+/* Карусел */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-slide:first-child {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    object-fit: cover;
+    display: block;
+    padding: 0;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 25px 30px;
+    text-align: center;
+}
+
+.slide-caption h2 {
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    color: #35523a;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+.slide-caption p {
+    margin-bottom: 0;
+    font-size: 1.2em;
+    color: #35523a;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #5bb86b;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 5;
+}
+
+.carousel-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #35523a;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-button.prev {
+    left: 20px;
+}
+
+.carousel-button.next {
+    right: 20px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    z-index: 5;
+}
+
+.dot {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 8px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+    padding: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.dot.active, .dot:hover {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+/* За нас секция */
+.about-section {
+    background-color: #e2f7e1;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-image {
+    flex: 1 1 300px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    flex: 2 1 400px;
+}
+
+/* Превю на блог секцията */
+.blog-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.blog-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    padding: 0;
+}
+
+.blog-card-content {
+    padding: 20px;
+}
+
+.blog-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #35523a;
+}
+
+.blog-card p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #35523a;
+    padding: 0;
+}
+
+.read-more {
+    display: inline-block;
+    color: #5bb86b;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.read-more:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #5bb86b;
+    transition: width 0.3s;
+}
+
+.read-more:hover:after {
+    width: 100%;
+}
+
+.see-all-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Футър */
+footer {
+    background-color: #b6e2c6;
+    color: #35523a;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.footer-section:first-child {
+    text-align: left;
+}
+
+.footer-section:last-child {
+    text-align: right;
+}
+
+.footer-section h3 {
+    color: #35523a;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-section h3:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: #5bb86b;
+    bottom: -5px;
+    left: 0;
+    border-radius: 2px;
+}
+
+.footer-section p {
+    margin: 10px 0;
+    color: #35523a;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: #35523a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #1e2d1b;
+    padding-left: 5px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #35523a;
+    font-size: 0.9em;
+    border-top: 1px solid rgba(53, 82, 58, 0.2);
+}
+
+/* Стилове за страницата "За родители" */
+.page-banner {
+    background-color: #b6e2c6;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.page-banner h1 {
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.page-banner p {
+    font-size: 18px;
+    color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.parents-section {
+    margin-bottom: 60px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Стилове за секция "Общо представяне" */
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.info-card {
+    flex: 1 1 300px;
+    background-color: #f3f8f4;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    font-size: 40px;
+    color: #5bb86b;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.info-card h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info-card p, .info-card ul, .info-card ol {
+    color: #35523a;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.info-card ul, .info-card ol {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.info-card li {
+    margin-bottom: 5px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Ползи от платформата (Benefits Section) */
+.benefits-section {
+    background-color: #e2f7e1;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.benefits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon {
+    font-size: 3.5rem;
+    color: #5bb86b;
+    margin-bottom: 1rem;
+}
+
+.benefit-icon i {
+    background: -webkit-linear-gradient(45deg, #5bb86b, #b6e2c6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+.benefit-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.benefit-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.benefit-card li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.advice-section {
+    background-color: #e2f7e1;
+}
+
+.advice-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.advice-card {
+    flex: 1 1 45%;
+    background-color: #f3f8f4;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.advice-card h3 {
+    margin-bottom: 15px;
+    color: #35523a;
+}
+
+.advice-card h3 i {
+    color: #5bb86b;
+    margin-right: 10px;
+}
+
+/* Стилове за секция "Ресурси" */
+.resources-section {
+    background-color: #f3f8f4;
+}
+
+.resources-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.resource-card {
+    flex: 1 1 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.resource-card h3 {
+    margin-bottom: 20px;
+    color: #35523a;
+}
+
+.resource-card h3 i {
+    color: #5bb86b;
+    margin-right: 10px;
+}
+
+.resource-links {
+    list-style: none;
+    padding: 0;
+}
+
+.resource-links li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.resource-links li:before {
+    content: '\f0a9';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #5bb86b;
+}
+
+.resource-links a {
+    color: #5bb86b;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.resource-links a:hover {
+    color: #35523a;
+}
+
+/* Стилове за контакт секция */
+.contact-section {
+    background-color: #5bb86b;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 3rem;
+}
+
+.contact-section h2 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.contact-text {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: white;
+    color: #5bb86b;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #e2f7e1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary i {
+    margin-right: 0.5rem;
+}
+
+/* Активна връзка в навигацията */
+.nav-links a.active {
+    background-color: #e2f7e1;
+    color: #1e2d1b;
+    font-weight: 700;
+}
+
+/* Responsive стилове за мобилни устройства */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+    
+    .logo-title-wrapper {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .site-logo {
+        max-height: 60px;
+    }
+    
+    .nav-container {
+        display: none;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 60px;
+        z-index: 10;
+    }
+    
+    .nav-container.active {
+        display: block;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        background-color: #e2f7e1;
+        padding: 15px;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .auth-links {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(53, 82, 58, 0.2);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    .carousel-button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .slide-caption h2 {
+        font-size: 1.4em;
+    }
+    
+    .features-container {
+        gap: 15px;
+    }
+    
+    .feature-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    .about-container {
+        flex-direction: column;
+    }
+    
+    .about-image, .about-content {
+        flex: 1 1 100%;
+    }
+    
+    .blog-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .footer-section {
+        max-width: 100%;
+    }
+    
+    .footer-section:first-child,
+    .footer-section:last-child {
+        text-align: center;
+    }
+    
+    .footer-section h3:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .info-card, .benefit-card, .advice-card, .resource-card {
+        flex: 1 1 100%;
+    }
+    
+    .page-banner {
+        padding: 30px 15px;
+    }
+    
+    .page-banner h1 {
+        font-size: 1.8em;
+    }
+    
+    .page-banner p {
+        font-size: 16px;
+    }
+    
+    .parents-section {
+        padding: 20px 15px;
+    }
+}
+
+/* Стилове за favicon в адресната лента */
+:root {
+    --favicon-color: #5bb86b;
+}
+
+/* Иконата се управлява чрез link таг в HTML */
+
+/* Blog Section Styles */
+.blog-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.blog-post {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-post-content {
+    padding: 1.5rem;
+}
+
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.post-meta i {
+    color: #5bb86b;
+}
+
+.blog-post h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.blog-post p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    color: #5bb86b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #35523a;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.pagination-button {
+    padding: 0.5rem 1rem;
+    border: 2px solid #5bb86b;
+    background: white;
+    color: #5bb86b;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.pagination-button:hover,
+.pagination-button.active {
+    background-color: #5bb86b;
+    color: white;
+}
+
+.pagination-button.next {
+    padding: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* OpenDyslexic Font Styles */
+.dyslexic-font {
+    font-family: 'OpenDyslexic', 'Open Sans', Arial, sans-serif !important;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+}
+
+.font-switcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5bb86b;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.font-switcher:hover {
+    transform: scale(1.1);
+    background-color: #35523a;
+}
+
+.font-switcher i {
+    font-size: 24px;
+}
+
+.contact-item i {
+    color: #5bb86b;
+    font-size: 1.5em;
+    width: 30px; 
+    text-align: center;
+}
+
+.footer-section i {
+    color: #5bb86b;
+}
+
+/* Blog Post Single Page Styles */
+.blog-post-single {
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.post-header h1 {
+    color: #4a6670;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.post-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.post-content p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.post-content h2 {
+    color: #6a9ca4;
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.post-content ul {
+    list-style: disc;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.post-content ul li {
+    font-size: 1.05em;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f2d0a7;
+    color: #4a6670;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.back-button:hover {
+    background-color: #e9c28e;
+    transform: translateY(-2px);
+}
