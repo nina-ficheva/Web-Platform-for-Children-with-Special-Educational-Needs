@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Математически игри - ДЕЦА СЪС СОП</title>
+    <title>Емоционални и социални игри - ДЕЦА СЪС СОП</title>
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABM0lEQVRYR+2WsUoDQRCG/7mTgI1gF0hpYWFja5UCgq2FrY2VD2Bpa2vvE1j7ABZWgoWghSDY2QiChaTRQu9CciebHLnkCMp6JLnKZT/Y3Zn55t+ZZZdQUKCgXFQAfiV4YbH9OPvQxlqNKbkA+1G8bQh7tQK0Gf0QOCTChQBnA0mPZoFVzwVjPaLeEHcgO1Ur4xY/1+0GF9Ek9F3g0ghPc9m3vZqIPNZgYDWr+pQToO/tDOAO8TkQXKkqzw3Q664bA7cTgGuAl7MA6Jdwhzm9FZI3c3KpQsxfgRJiFoCKSqokpPKXZWCuFfwXUwf5dWdJ0qS6nfdOMCr+iUJaAF0ApwZwUFQEzl/E7+IjQ5ilojLQBLBMDhuTcKCq5KwQ/0JpAcyK13UIVfOZK1LW2Jk68AvLlrwhhgr3ygAAAABJRU5ErkJggg==">
     <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABM0lEQVRYR+2WsUoDQRCG/7mTgI1gF0hpYWFja5UCgq2FrY2VD2Bpa2vvE1j7ABZWgoWghSDY2QiChaTRQu9CciebHLnkCMp6JLnKZT/Y3Zn55t+ZZZdQUKCgXFQAfiV4YbH9OPvQxlqNKbkA+1G8bQh7tQK0Gf0QOCTChQBnA0mPZoFVzwVjPaLeEHcgO1Ur4xY/1+0GF9Ek9F3g0ghPc9m3vZqIPNZgYDWr+pQToO/tDOAO8TkQXKkqzw3Q664bA7cTgGuAl7MA6Jdwhzm9FZI3c3KpQsxfgRJiFoCKSqokpPKXZWCuFfwXUwf5dWdJ0qS6nfdOMCr+iUJaAF0ApwZwUFQEzl/E7+IjQ5ilojLQBLBMDhuTcKCq5KwQ/0JpAcyK13UIVfOZK1LW2Jk68AvLlrwhhgr3ygAAAABJRU5ErkJggg==">
@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/opendyslexic" />
     <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/b165c17852.js" crossorigin="anonymous"></script>
     <style>
@@ -118,32 +117,6 @@
             background-color: #e9c28e;
             transform: translateY(-2px);
         }
-
-        .font-switcher {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #6a9ca4;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 1.2em;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-
-        .font-switcher:hover {
-            background-color: #5a8a94;
-            transform: scale(1.1);
-        }
-
-        .dyslexic-font {
-            font-family: 'OpenDyslexic', sans-serif !important;
-        }
     </style>
 </head>
 <body>
@@ -166,96 +139,122 @@
                     <li><a href="../blog.html"><i class="fas fa-blog"></i> Блог</a></li>
                     <li><a href="../contacts.html"><i class="fas fa-envelope"></i> Контакти</a></li>
                 </ul>
+               
             </div>
             <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
         </nav>
     </header>
     
     <main>
+        <!-- Банер на страницата -->
         <section class="page-banner">
-            <h1>Математически игри</h1>
-            <p>Интерактивни математически игри, адаптирани за деца със специални образователни потребности</p>
+            <h1>Емоционални и социални игри</h1>
+            <p>Забавни игри за развитие на емоционалната интелигентност и социалните умения</p>
         </section>
         
+        <!-- Навигационни бутони -->
         <div class="navigation-buttons">
             <a href="../educational-games.html" class="back-button"><i class="fas fa-arrow-left"></i> Обратно към всички игри</a>
         </div>
         
+        <!-- Списък с игри -->
         <section class="parents-section">
-            <h2 class="section-title">Нашите математически игри</h2>
+            <h2 class="section-title">Нашите емоционални и социални игри</h2>
             
             <div class="game-list">
                 <div class="game-card">
-                    <img src="../images/bj.png" alt="Игра за броене на животни" class="game-image">
+                    <img src="../images/re.png" alt="Разпознаване на емоции" class="game-image">
                     <div class="game-content">
-                        <h3 class="game-title">Броене на животни</h3>
+                        <h3 class="game-title">Разпознаване на емоции</h3>
                         <div class="game-difficulty">
                             <span class="difficulty-dot difficulty-active"></span>
                             <span class="difficulty-dot"></span>
                             <span class="difficulty-dot"></span>
                         </div>
                         <p class="game-age">Възраст: 3-6 години</p>
-                        <p class="game-description">Забавна игра за броене, в която децата трябва да преброят различни животни и да изберат правилния отговор.</p>
+                        <p class="game-description">Научете се да разпознавате и назовавате различни емоции чрез забавни картинки и ситуации.</p>
                         <div class="game-tags">
-                            <span class="game-tag">Броене</span>
-                            <span class="game-tag">Животни</span>
-                            <span class="game-tag">Визуална</span>
+                            <span class="game-tag">Емоции</span>
+                            <span class="game-tag">Разпознаване</span>
+                            <span class="game-tag">Чувства</span>
                         </div>
-                        <a href="counting-animals.html" class="btn">Играй сега</a> 
+                        <a href="emotion-recognition.html" class="btn">Играй сега</a>
                     </div>
                 </div>
                 
                 <div class="game-card">
-                    <img src="../images/sk.png" alt="Събиране с картинки" class="game-image">
+                    <img src="../images/kch.png" alt="Как се чувствам?" class="game-image">
                     <div class="game-content">
-                        <h3 class="game-title">Събиране с картинки</h3>
+                        <h3 class="game-title">Как се чувствам?</h3>
                         <div class="game-difficulty">
                             <span class="difficulty-dot difficulty-active"></span>
                             <span class="difficulty-dot difficulty-active"></span>
                             <span class="difficulty-dot"></span>
                         </div>
                         <p class="game-age">Възраст: 5-8 години</p>
-                        <p class="game-description">Визуална игра за обучение в събиране, където децата трябва да съберат групи от предмети и да открият верния отговор.</p>
+                        <p class="game-description">Игра, която помага на децата да изразяват своите чувства и да разбират емоциите на другите.</p>
                         <div class="game-tags">
-                            <span class="game-tag">Събиране</span>
-                            <span class="game-tag">Визуална</span>
-                            <span class="game-tag">Интерактивна</span>
+                            <span class="game-tag">Емоции</span>
+                            <span class="game-tag">Социални умения</span>
+                            <span class="game-tag">Емпатия</span>
                         </div>
-                        <a href="addition-pictures.html" class="btn">Играй сега</a>
+                        <a href="how-do-i-feel.html" class="btn">Играй сега</a>
                     </div>
                 </div>
                 
                 <div class="game-card">
-                    <img src="../images/is.png" alt="Интерактивно сметало" class="game-image">
+                    <img src="../images/rc.png" alt="Решаване на конфликти" class="game-image">
                     <div class="game-content">
-                        <h3 class="game-title">Интерактивно сметало</h3>
+                        <h3 class="game-title">Решаване на конфликти</h3>
                         <div class="game-difficulty">
                             <span class="difficulty-dot difficulty-active"></span>
-                            <span class="difficulty-dot"></span>
-                            <span class="difficulty-dot"></span>
+                            <span class="difficulty-dot difficulty-active"></span>
+                            <span class="difficulty-dot difficulty-active"></span>
                         </div>
-                        <p class="game-age">Възраст: 4-7 години</p>
-                        <p class="game-description">Виртуално сметало за практикуване на броене и основни аритметични операции с визуална подкрепа.</p>
+                        <p class="game-age">Възраст: 6-10 години</p>
+                        <p class="game-description">Интерактивни сценарии, които учат децата на конструктивни начини за разрешаване на конфликти.</p>
                         <div class="game-tags">
-                            <span class="game-tag">Броене</span>
-                            <span class="game-tag">Събиране</span>
-                            <span class="game-tag">Визуално-моторна</span>
+                            <span class="game-tag">Конфликти</span>
+                            <span class="game-tag">Социални умения</span>
+                            <span class="game-tag">Комуникация</span>
                         </div>
-                        <a href="abacus.html" class="btn">Играй сега</a>
+                        <a href="conflict-resolution.html" class="btn">Играй сега</a>
                     </div>
                 </div>
             </div>
         </section>
         
+        <!-- Навигационни бутони отдолу -->
         <div class="navigation-buttons">
             <a href="../educational-games.html" class="back-button"><i class="fas fa-arrow-left"></i> Обратно към всички игри</a>
         </div>
         
-        <!-- Секция за контакт -->
-        <section class="contact-section">
-            <h2>Имате идеи за нови математически игри?</h2>
-            <p class="contact-text">Бихме се радвали да чуем вашите предложения за нови образователни игри, които биха помогнали на децата да развият математически умения.</p>
-            <a href="../contacts.html" class="btn">Свържете се с нас</a>
+        <!-- Допълнителна секция -->
+        <section class="parents-section">
+            <h2 class="section-title">Защо са важни емоционалните и социални игри?</h2>
+            <div class="parent-info-container">
+                <div class="parent-info-item">
+                    <div class="parent-info-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Развиват емоционалната интелигентност</h3>
+                    <p>Емоционалните и социални игри помагат на децата да разпознават, разбират и управляват своите емоции и тези на другите.</p>
+                </div>
+                <div class="parent-info-item">
+                    <div class="parent-info-icon">
+                        <i class="fas fa-users-line"></i>
+                    </div>
+                    <h3>Подобряват социалните умения</h3>
+                    <p>Чрез интерактивни сценарии децата развиват умения за комуникация, сътрудничество и разрешаване на конфликти.</p>
+                </div>
+                <div class="parent-info-item">
+                    <div class="parent-info-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3>Повишават самосъзнанието</h3>
+                    <p>Игрите насърчават децата да осъзнават своите силни страни и да развиват позитивна представа за себе си.</p>
+                </div>
+            </div>
         </section>
     </main>
     
@@ -282,23 +281,14 @@
         </div>
     </footer>
     
-    <button class="font-switcher" id="fontSwitcher" title="Промени шрифта">
-        <i class="fas fa-font"></i>
-    </button>
-    
-    <script src="../script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const fontSwitcher = document.getElementById('fontSwitcher');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navContainer = document.querySelector('.nav-container');
             
-            const savedFont = localStorage.getItem('dyslexicFont');
-            if (savedFont === 'true') {
-                document.body.classList.add('dyslexic-font');
-            }
-            
-            fontSwitcher.addEventListener('click', function() {
-                document.body.classList.toggle('dyslexic-font');
-                localStorage.setItem('dyslexicFont', document.body.classList.contains('dyslexic-font'));
+            menuToggle.addEventListener('click', function() {
+                navContainer.classList.toggle('active');
+                menuToggle.classList.toggle('active');
             });
         });
     </script>

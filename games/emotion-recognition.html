@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Разпознаване на емоции - ДЕЦА СЪС СОП</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABM0lEQVRYR+2WsUoDQRCG/7mTgI1gF0hpYWFja5UCgq2FrY2VD2Bpa2vvE1j7ABZWgoWghSDY2QiChaTRQu9CciebHLnkCMp6JLnKZT/Y3Zn55t+ZZZdQUKCgXFQAfiV4YbH9OPvQxlqNKbkA+1G8bQh7tQK0Gf0QOCTChQBnA0mPZoFVzwVjPaLeEHcgO1Ur4xY/1+0GF9Ek9F3g0ghPc9m3vZqIPNZgYDWr+pQToO/tDOAO8TkQXKkqzw3Q664bA7cTgGuAl7MA6Jdwhzm9FZI3c3KpQsxfgRJiFoCKSqokpPKXZWCuFfwXUwf5dWdJ0qS6nfdOMCr+iUJaAF0ApwZwUFQEzl/E7+IjQ5ilojLQBLBMDhuTcKCq5KwQ/0JpAcyK13UIVfOZK1LW2Jk68AvLlrwhhgr3ygAAAABJRU5ErkJggg==">
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABM0lEQVRYR+2WsUoDQRCG/7mTgI1gF0hpYWFja5UCgq2FrY2VD2Bpa2vvE1j7ABZWgoWghSDY2QiChaTRQu9CciebHLnkCMp6JLnKZT/Y3Zn55t+ZZZdQUKCgXFQAfiV4YbH9OPvQxlqNKbkA+1G8bQh7tQK0Gf0QOCTChQBnA0mPZoFVzwVjPaLeEHcgO1Ur4xY/1+0GF9Ek9F3g0ghPc9m3vZqIPNZgYDWr+pQToO/tDOAO8TkQXKkqzw3Q664bA7cTgGuAl7MA6Jdwhzm9FZI3c3KpQsxfgRJiFoCKSqokpPKXZWCuFfwXUwf5dWdJ0qS6nfdOMCr+iUJaAF0ApwZwUFQEzl/E7+IjQ5ilojLQBLBMDhuTcKCq5KwQ/0JpAcyK13UIVfOZK1LW2Jk68AvLlrwhhgr3ygAAAABJRU5ErkJggg==">
+    <meta name="theme-color" content="#6a9ca4">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/opendyslexic" />
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/b165c17852.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <button class="font-switcher" id="fontSwitcher" title="Промени шрифта">
+        <i class="fas fa-font"></i>
+    </button>
+    <header>
+        <div class="logo-container">
+            <div class="logo-title-wrapper">
+                <div class="logo-icon-container">
+                    <i class="fas fa-children"></i>
+                </div>
+                <h1>ДЕЦА СЪС СОП</h1>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-links main-links">
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Начало</a></li>
+                    <li><a href="../parents.html"><i class="fas fa-users"></i> За родители</a></li>
+                    <li><a href="../educational-games.html" class="active"><i class="fas fa-gamepad"></i> Образователни игри</a></li>
+                    <li><a href="../blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="../contacts.html"><i class="fas fa-envelope"></i> Контакти</a></li>
+                </ul>
+            </div>
+            <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="game-container">
+            <h2 class="game-title">Разпознаване на емоции</h2>
+            
+            <div class="emotion-image-container">
+                <img id="emotion-image" src="" alt="Емоция" class="emotion-image">
+            </div>
+            
+            <div id="options-container" class="options-container">
+            </div>
+            
+            <p id="feedback-message" class="feedback-message"></p>
+            <button id="next-button" class="next-button" style="display: none;">Следваща емоция</button>
+            
+            <div class="score-bar-container">
+                <div id="score-bar" class="score-bar"></div>
+            </div>
+            <p id="progress-text" class="progress-text">Емоция 1 от 10</p>
+
+            <div class="navigation-buttons">
+                <a href="emotional-social-games.html" class="back-button"><i class="fas fa-arrow-left"></i> Обратно към емоционални и социални игри</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Контакти</h3>
+                <p><i class="fas fa-envelope"></i> deca_sop.bg</p>
+                <p><i class="fas fa-phone"></i> +359 888 123 456</p>
+            </div>
+            <div class="footer-section">
+                <h3>Бързи връзки</h3>
+                <ul>
+                    <li><a href="../index.html">Начало</a></li>
+                    <li><a href="../parents.html">За родители</a></li>
+                    <li><a href="../educational-games.html">Образователни игри</a></li>
+                    <li><a href="../blog.html">Блог</a></li>
+                    <li><a href="../contacts.html">Контакти</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Деца със СОП.</p>
+        </div>
+    </footer>
+
+    <script>
+        const emotions = [
+            {
+                image: "../images/shtastie.png",
+                correctAnswer: "Щастие",
+                options: ["Щастие", "Тъга", "Гняв", "Изненада"]
+            },
+            {
+                image: "../images/tuga.png",
+                correctAnswer: "Тъга",
+                options: ["Тъга", "Щастие", "Страх", "Отвращение"]
+            },
+            {
+                image: "../images/gnqv.png",
+                correctAnswer: "Гняв",
+                options: ["Гняв", "Изненада", "Щастие", "Тъга"]
+            },
+            {
+                image: "../images/iznenada.png",
+                correctAnswer: "Изненада",
+                options: ["Изненада", "Страх", "Гняв", "Отвращение"]
+            },
+            {
+                image: "../images/strah.png",
+                correctAnswer: "Страх",
+                options: ["Страх", "Щастие", "Тъга", "Гняв"]
+            },
+            {
+                image: "../images/otvrushtenie.png",
+                correctAnswer: "Отвращение",
+                options: ["Отвращение", "Изненада", "Страх", "Щастие"]
+            },
+            {
+                image: "../images/spokoistvie.png",
+                correctAnswer: "Спокойствие",
+                options: ["Спокойствие", "Гняв", "Тъга", "Страх"]
+            },
+            {
+                image: "../images/sram.png",
+                correctAnswer: "Срам",
+                options: ["Срам", "Щастие", "Изненада", "Спокойствие"]
+            }
+        ];
+
+        let currentEmotionIndex = 0;
+        let score = 0;
+        let selectedOption = null;
+        let shuffledEmotions = [];
+
+        const emotionImage = document.getElementById('emotion-image');
+        const optionsContainer = document.getElementById('options-container');
+        const feedbackMessage = document.getElementById('feedback-message');
+        const nextButton = document.getElementById('next-button');
+        const scoreBar = document.getElementById('score-bar');
+        const progressText = document.getElementById('progress-text');
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function startGame() {
+            score = 0;
+            currentEmotionIndex = 0;
+            shuffleArray(emotions);
+            shuffledEmotions = [...emotions]; 
+            loadEmotion();
+            updateScoreBar();
+            nextButton.style.display = 'none';
+        }
+
+        function loadEmotion() {
+            if (currentEmotionIndex < shuffledEmotions.length) {
+                const currentEmotion = shuffledEmotions[currentEmotionIndex];
+                emotionImage.src = currentEmotion.image;
+                feedbackMessage.textContent = '';
+                nextButton.style.display = 'none';
+                optionsContainer.innerHTML = '';
+                selectedOption = null;
+
+                const shuffledOptions = [...currentEmotion.options];
+                shuffleArray(shuffledOptions);
+
+                shuffledOptions.forEach(option => {
+                    const button = document.createElement('button');
+                    button.textContent = option;
+                    button.classList.add('option-button');
+                    button.addEventListener('click', () => selectOption(button, option, currentEmotion.correctAnswer));
+                    optionsContainer.appendChild(button);
+                });
+                updateProgressText();
+            } else {
+                displayGameEnd();
+            }
+        }
+
+        function selectOption(button, chosenOption, correctAnswer) {
+            if (selectedOption !== null) return; 
+
+            selectedOption = chosenOption;
+
+            document.querySelectorAll('.option-button').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+
+            button.classList.add('selected');
+
+            if (chosenOption === correctAnswer) {
+                feedbackMessage.textContent = 'Правилно!';
+                feedbackMessage.style.color = '#4CAF50';
+                button.classList.add('correct');
+                score++;
+            } else {
+                feedbackMessage.textContent = `Грешно. Правилният отговор е: ${correctAnswer}`;
+                feedbackMessage.style.color = '#F44336';
+                button.classList.add('incorrect');
+                Array.from(optionsContainer.children).forEach(btn => {
+                    if (btn.textContent === correctAnswer) {
+                        btn.classList.add('correct');
+                    }
+                });
+            }
+
+            Array.from(optionsContainer.children).forEach(btn => btn.disabled = true);
+            nextButton.style.display = 'block';
+            updateScoreBar();
+        }
+
+        function nextEmotion() {
+            currentEmotionIndex++;
+            loadEmotion();
+            Array.from(optionsContainer.children).forEach(btn => btn.disabled = false);
+        }
+
+        function updateScoreBar() {
+            const percentage = (score / shuffledEmotions.length) * 100;
+            scoreBar.style.width = `${percentage}%`;
+            scoreBar.textContent = `${score}/${shuffledEmotions.length}`;
+        }
+
+        function updateProgressText() {
+            progressText.textContent = `Емоция ${currentEmotionIndex + 1} от ${shuffledEmotions.length}`;
+        }
+
+        function displayGameEnd() {
+            feedbackMessage.textContent = `Играта приключи! Вашият резултат е ${score} от ${shuffledEmotions.length}.`;
+            feedbackMessage.style.color = '#4a6670';
+            optionsContainer.innerHTML = '';
+            nextButton.textContent = 'Играй отново';
+            nextButton.style.display = 'block';
+            nextButton.removeEventListener('click', nextEmotion);
+            nextButton.addEventListener('click', startGame);
+            progressText.textContent = 'Играта приключи!';
+        }
+
+        nextButton.addEventListener('click', nextEmotion);
+
+        startGame();
+
+        const fontSwitcher = document.getElementById('fontSwitcher');
+        const body = document.body;
+        
+        const savedFont = localStorage.getItem('dyslexicFont');
+        if (savedFont === 'true') {
+            body.classList.add('dyslexic-font');
+        }
+
+        fontSwitcher.addEventListener('click', () => {
+            body.classList.toggle('dyslexic-font');
+            localStorage.setItem('dyslexicFont', body.classList.contains('dyslexic-font'));
+        });
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>

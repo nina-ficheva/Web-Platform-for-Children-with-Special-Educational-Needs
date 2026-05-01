@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Разрешаване на конфликти - ДЕЦА СЪС СОП</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABM0lEQVRYR+2WsUoDQRCG/7mTgI1gF0hpYWFja5UCgq2FrY2VD2Bpa2vvE1j7ABZWgoWghSDY2QiChaTRQu9CciebHLnkCMp6JLnKZT/Y3Zn55t+ZZZdQUKCgXFQAfiV4YbH9OPvQxlqNKbkA+1G8bQh7tQK0Gf0QOCTChQBnA0mPZoFVzwVjPaLeEHcgO1Ur4xY/1+0GF9Ek9F3g0ghPc9m3vZqIPNZgYDWr+pQToO/tDOAO8TkQXKkqzw3Q664bA7cTgGuAl7MA6Jdwhzm9FZI3c3KpQsxfgRJiFoCKSqokpPKXZWCuFfwXUwf5dWdJ0qS6nfdOMCr+iUJaAF0ApwZwUFQEzl/E7+IjQ5ilojLQBLBMDhuTcKCq5KwQ/0JpAcyK13UIVfOZK1LW2Jk68AvLlrwhhgr3ygAAAABJRU5ErkJggg==">
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABM0lEQVRYR+2WsUoDQRCG/7mTgI1gF0hpYWFja5UCgq2FrY2VD2Bpa2vvE1j7ABZWgoWghSDY2QiChaTRQu9CciebHLnkCMp6JLnKZT/Y3Zn55t+ZZZdQUKCgXFQAfiV4YbH9OPvQxlqNKbkA+1G8bQh7tQK0Gf0QOCTChQBnA0mPZoFVzwVjPaLeEHcgO1Ur4xY/1+0GF9Ek9F3g0ghPc9m3vZqIPNZgYDWr+pQToO/tDOAO8TkQXKkqzw3Q664bA7cTgGuAl7MA6Jdwhzm9FZI3c3KpQsxfgRJiFoCKSqokpPKXZWCuFfwXUwf5dWdJ0qS6nfdOMCr+iUJaAF0ApwZwUFQEzl/E7+IjQ5ilojLQBLBMDhuTcKCq5KwQ/0JpAcyK13UIVfOZK1LW2Jk68AvLlrwhhgr3ygAAAABJRU5ErkJggg==">
+    <meta name="theme-color" content="#6a9ca4">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/opendyslexic" />
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/b165c17852.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <button class="font-switcher" id="fontSwitcher" title="Промени шрифта">
+        <i class="fas fa-font"></i>
+    </button>
+    <header>
+        <div class="logo-container">
+            <div class="logo-title-wrapper">
+                <div class="logo-icon-container">
+                    <i class="fas fa-children"></i>
+                </div>
+                <h1>ДЕЦА СЪС СОП</h1>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-links main-links">
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Начало</a></li>
+                    <li><a href="../parents.html"><i class="fas fa-users"></i> За родители</a></li>
+                    <li><a href="../educational-games.html" class="active"><i class="fas fa-gamepad"></i> Образователни игри</a></li>
+                    <li><a href="../blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="../contacts.html"><i class="fas fa-envelope"></i> Контакти</a></li>
+                </ul>
+            </div>
+            <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="game-container">
+            <h2 class="game-title">Разрешаване на конфликти</h2>
+            
+            <div class="scenario-box">
+                <p id="scenario-text" class="scenario-text"></p>
+                <div id="options-container" class="options-container">
+                    <!-- Options will be loaded here by JavaScript -->
+                </div>
+            </div>
+            
+            <p id="feedback-message" class="feedback-message"></p>
+            <button id="next-button" class="next-button" style="display: none;">Следващ сценарий</button>
+            
+            <div class="score-bar-container">
+                <div id="score-bar" class="score-bar"></div>
+            </div>
+            <p id="progress-text" class="progress-text">Сценарий 1 от X</p>
+        </div>
+
+        <!-- Навигационни бутони отдолу -->
+        <div class="navigation-buttons">
+            <a href="emotional-social-games.html" class="back-button"><i class="fas fa-arrow-left"></i> Обратно към емоционални и социални игри</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Контакти</h3>
+                <p><i class="fas fa-envelope"></i> deca_sop.bg</p>
+                <p><i class="fas fa-phone"></i> +359 888 123 456</p>
+            </div>
+            <div class="footer-section">
+                <h3>Бързи връзки</h3>
+                <ul>
+                    <li><a href="../index.html">Начало</a></li>
+                    <li><a href="../parents.html">За родители</a></li>
+                    <li><a href="../educational-games.html">Образователни игри</a></li>
+                    <li><a href="../blog.html">Блог</a></li>
+                    <li><a href="../contacts.html">Контакти</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Деца със СОП.</p>
+        </div>
+    </footer>
+    
+    <script>
+        const scenarios = [
+            {
+                text: "Две деца искат да играят с една и съща играчка. Какво могат да направят?",
+                options: [
+                    "Да се сбият за играчката.",
+                    "Да плачат и да се сърдят.",
+                    "Да говорят помежду си и да се редуват.",
+                    "Да скрият играчката един от друг."
+                ],
+                correctAnswerIndex: 2
+            },
+            {
+                text: "Едно дете случайно събори кулата от кубчета на друго дете. Какво трябва да направи?",
+                options: [
+                    "Да избяга и да се скрие.",
+                    "Да се засмее.",
+                    "Да се извини и да помогне да се построи отново кулата.",
+                    "Да обвини другото дете."
+                ],
+                correctAnswerIndex: 2
+            },
+            {
+                text: "Твоят приятел не иска да играе играта, която ти харесваш. Какво можеш да му предложиш?",
+                options: [
+                    "Да го накараш насила да играе.",
+                    "Да му се разсърдиш и да спреш да си говориш с него.",
+                    "Да предложиш да играете на друга игра, която и двамата харесвате.",
+                    "Да отидеш да играеш сам."
+                ],
+                correctAnswerIndex: 2
+            },
+            {
+                text: "Две деца спорят кой да е пръв на пързалката. Как могат да решат проблема?",
+                options: [
+                    "Да се бутат един друг.",
+                    "Да викат и да плачат.",
+                    "Да хвърлят чоп или да играят 'Камък, ножица, хартия'.",
+                    "Да повикат възрастен да реши вместо тях."
+                ],
+                correctAnswerIndex: 2
+            },
+            {
+                text: "Някой взе химикалката ти без да пита. Какво е най-добре да направиш?",
+                options: [
+                    "Да му я изтръгнеш от ръката.",
+                    "Да я скриеш, когато той не гледа.",
+                    "Да попиташ спокойно: 'Мога ли да си върна химикалката, моля те?'.",
+                    "Да се оплачеш на учител."
+                ],
+                correctAnswerIndex: 2
+            }
+        ];
+
+        let currentScenarioIndex = 0;
+        let score = 0;
+        let selectedOption = null;
+        let shuffledScenarios = [];
+
+        const scenarioText = document.getElementById('scenario-text');
+        const optionsContainer = document.getElementById('options-container');
+        const feedbackMessage = document.getElementById('feedback-message');
+        const nextButton = document.getElementById('next-button');
+        const scoreBar = document.getElementById('score-bar');
+        const progressText = document.getElementById('progress-text');
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function startGame() {
+            score = 0;
+            currentScenarioIndex = 0;
+            shuffleArray(scenarios);
+            shuffledScenarios = [...scenarios];
+            loadScenario();
+            updateScoreBar();
+            nextButton.style.display = 'none';
+        }
+
+        function loadScenario() {
+            if (currentScenarioIndex < shuffledScenarios.length) {
+                const currentScenario = shuffledScenarios[currentScenarioIndex];
+                scenarioText.textContent = currentScenario.text;
+                feedbackMessage.textContent = '';
+                nextButton.style.display = 'none';
+                optionsContainer.innerHTML = '';
+                selectedOption = null;
+
+                currentScenario.options.forEach((option, index) => {
+                    const optionButton = document.createElement('button');
+                    optionButton.className = 'option-button';
+                    optionButton.textContent = option;
+                    optionButton.addEventListener('click', () => selectOption(optionButton, index, currentScenario.correctAnswerIndex));
+                    optionsContainer.appendChild(optionButton);
+                });
+                updateProgressText();
+            } else {
+                displayGameEnd();
+            }
+        }
+
+        function selectOption(button, chosenIndex, correctIndex) {
+            if (selectedOption !== null) return; 
+
+            selectedOption = chosenIndex;
+
+            Array.from(optionsContainer.children).forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            button.classList.add('selected');
+
+            if (chosenIndex === correctIndex) {
+                feedbackMessage.textContent = 'Правилно!';
+                feedbackMessage.style.color = '#4CAF50';
+                button.classList.add('correct');
+                score++;
+            } else {
+                feedbackMessage.textContent = `Грешно. Правилният отговор е: ${shuffledScenarios[currentScenarioIndex].options[correctIndex]}`;
+                feedbackMessage.style.color = '#F44336';
+                button.classList.add('incorrect');
+                Array.from(optionsContainer.children).forEach((btn, idx) => {
+                    if (idx === correctIndex) {
+                        btn.classList.add('correct');
+                    }
+                });
+            }
+
+            Array.from(optionsContainer.children).forEach(btn => btn.style.pointerEvents = 'none');
+            nextButton.style.display = 'block';
+            updateScoreBar();
+        }
+
+        function nextScenario() {
+            currentScenarioIndex++;
+            loadScenario();
+            Array.from(optionsContainer.children).forEach(btn => btn.style.pointerEvents = 'auto');
+        }
+
+        function updateScoreBar() {
+            const percentage = (score / shuffledScenarios.length) * 100;
+            scoreBar.style.width = `${percentage}%`;
+            scoreBar.textContent = `${score}/${shuffledScenarios.length}`;
+        }
+
+        function updateProgressText() {
+            progressText.textContent = `Сценарий ${currentScenarioIndex + 1} от ${shuffledScenarios.length}`;
+        }
+
+        function displayGameEnd() {
+            feedbackMessage.textContent = `Играта приключи! Вашият резултат е ${score} от ${shuffledScenarios.length}.`;
+            feedbackMessage.style.color = '#4a6670';
+            optionsContainer.innerHTML = '';
+            nextButton.textContent = 'Играй отново';
+            nextButton.style.display = 'block';
+            nextButton.removeEventListener('click', nextScenario);
+            nextButton.addEventListener('click', startGame);
+            progressText.textContent = 'Играта приключи!';
+        }
+
+        nextButton.addEventListener('click', nextScenario);
+
+        startGame();
+
+        const fontSwitcher = document.getElementById('fontSwitcher');
+        const body = document.body;
+        
+        const savedFont = localStorage.getItem('dyslexicFont');
+        if (savedFont === 'true') {
+            body.classList.add('dyslexic-font');
+        }
+
+        fontSwitcher.addEventListener('click', () => {
+            body.classList.toggle('dyslexic-font');
+            localStorage.setItem('dyslexicFont', body.classList.contains('dyslexic-font'));
+        });
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>

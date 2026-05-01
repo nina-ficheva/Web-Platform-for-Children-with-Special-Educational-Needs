@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Съставяне на думи - ДЕЦА СЪС СОП</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABM0lEQVRYR+2WsUoDQRCG/7mTgI1gF0hpYWFja5UCgq2FrY2VD2Bpa2vvE1j7ABZWgoWghSDY2QiChaTRQu9CciebHLnkCMp6JLnKZT/Y3Zn55t+ZZZdQUKCgXFQAfiV4YbH9OPvQxlqNKbkA+1G8bQh7tQK0Gf0QOCTChQBnA0mPZoFVzwVjPaLeEHcgO1Ur4xY/1+0GF9Ek9F3g0ghPc9m3vZqIPNZgYDWr+pQToO/tDOAO8TkQXKkqzw3Q664bA7cTgGuAl7MA6Jdwhzm9FZI3c3KpQsxfgRJiFoCKSqokpPKXZWCuFfwXUwf5dWdJ0qS6nfdOMCr+iUJaAF0ApwZwUFQEzl/E7+IjQ5ilojLQBLBMDhuTcKCq5KwQ/0JpAcyK13UIVfOZK1LW2Jk68AvLlrwhhgr3ygAAAABJRU5ErkJggg==">
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABM0lEQVRYR+2WsUoDQRCG/7mTgI1gF0hpYWFja5UCgq2FrY2VD2Bpa2vvE1j7ABZWgoWghSDY2QiChaTRQu9CciebHLnkCMp6JLnKZT/Y3Zn55t+ZZZdQUKCgXFQAfiV4YbH9OPvQxlqNKbkA+1G8bQh7tQK0Gf0QOCTChQBnA0mPZoFVzwVjPaLeEHcgO1Ur4xY/1+0GF9Ek9F3g0ghPc9m3vZqIPNZgYDWr+pQToO/tDOAO8TkQXKkqzw3Q664bA7cTgGuAl7MA6Jdwhzm9FZI3c3KpQsxfgRJiFoCKSqokpPKXZWCuFfwXUwf5dWdJ0qS6nfdOMCr+iUJaAF0ApwZwUFQEzl/E7+IjQ5ilojLQBLBMDhuTcKCq5KwQ/0JpAcyK13UIVfOZK1LW2Jk68AvLlrwhhgr3ygAAAABJRU5ErkJggg==">
+    <meta name="theme-color" content="#6a9ca4">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/opendyslexic" />
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/b165c17852.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-title-wrapper">
+                <div class="logo-icon-container">
+                    <i class="fas fa-children"></i>
+                </div>
+                <h1>ДЕЦА СЪС СОП</h1>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-links main-links">
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Начало</a></li>
+                    <li><a href="../parents.html"><i class="fas fa-users"></i> За родители</a></li>
+                    <li><a href="../educational-games.html" class="active"><i class="fas fa-gamepad"></i> Образователни игри</a></li>
+                    <li><a href="../blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="../contacts.html"><i class="fas fa-envelope"></i> Контакти</a></li>
+                </ul>
+            </div>
+            <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="game-container">
+            <div class="game-header">
+                <h1 class="game-title">Съставяне на думи</h1>
+                <p class="game-description">Съставете думата от дадените букви.</p>
+            </div>
+
+            <div class="score-display">
+                Точки: <span id="score">0</span>
+            </div>
+
+            <div class="word-display" id="wordDisplay">
+            </div>
+
+            <div class="letters-container" id="lettersContainer">
+            </div>
+
+            <div class="feedback" id="feedback">
+            </div>
+
+            <div class="controls">
+                <button class="control-button" id="checkButton">Провери</button>
+                <button class="control-button hint-button" id="hintButton">Подсказка</button>
+                <button class="control-button" id="nextButton">Следваща дума</button>
+                <button class="control-button" id="resetButton">Нова игра</button>
+            </div>
+
+            <div class="navigation-buttons">
+                <a href="reading-games.html" class="back-button"><i class="fas fa-arrow-left"></i> Обратно към игрите за четене</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Контакти</h3>
+                <p><i class="fas fa-envelope"></i> deca_sop.bg</p>
+                <p><i class="fas fa-phone"></i> +359 888 123 456</p>
+            </div>
+            <div class="footer-section">
+                <h3>Бързи връзки</h3>
+                <ul>
+                    <li><a href="../index.html">Начало</a></li>
+                    <li><a href="../parents.html">За родители</a></li>
+                    <li><a href="../educational-games.html">Образователни игри</a></li>
+                    <li><a href="../blog.html">Блог</a></li>
+                    <li><a href="../contacts.html">Контакти</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Деца със СОП.</p>
+        </div>
+    </footer>
+
+    <button class="font-switcher" id="fontSwitcher" title="Промени шрифта">
+        <i class="fas fa-font"></i>
+    </button>
+
+    <script>
+        const words = [
+            'КУЧЕ', 'КОТКА', 'СЛОН', 'ЖИРАФ', 'ЗЕБРА',
+            'ПИЛЕ', 'ОВЦА', 'КОЗА', 'КРАВА', 'КОН',
+            'МИШКА', 'ЗАЕК', 'ЛИСИЦА', 'ВЪЛК', 'МЕЧКА'
+        ];
+
+        let currentWord = '';
+        let score = 0;
+        let selectedLetters = [];
+        let availableLetters = [];
+
+        function getRandomWord() {
+            return words[Math.floor(Math.random() * words.length)];
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function updateWordDisplay() {
+            const wordDisplay = document.getElementById('wordDisplay');
+            wordDisplay.innerHTML = '';
+            
+            for (let i = 0; i < currentWord.length; i++) {
+                const slot = document.createElement('div');
+                slot.className = 'letter-slot';
+                slot.dataset.index = i;
+                if (selectedLetters[i]) {
+                    slot.textContent = selectedLetters[i];
+                    slot.classList.add('filled');
+                }
+                wordDisplay.appendChild(slot);
+            }
+        }
+
+        function updateLettersContainer() {
+            const lettersContainer = document.getElementById('lettersContainer');
+            lettersContainer.innerHTML = '';
+            
+            availableLetters.forEach((letter, index) => {
+                const button = document.createElement('button');
+                button.className = 'letter-button';
+                button.textContent = letter;
+                button.dataset.index = index;
+                button.onclick = () => selectLetter(index);
+                if (letter === '') {
+                    button.classList.add('used');
+                }
+                lettersContainer.appendChild(button);
+            });
+        }
+
+        function selectLetter(index) {
+            const emptySlotIndex = selectedLetters.findIndex(letter => !letter);
+            if (emptySlotIndex !== -1) {
+                selectedLetters[emptySlotIndex] = availableLetters[index];
+                availableLetters[index] = '';
+                updateWordDisplay();
+                updateLettersContainer();
+            }
+        }
+
+        function checkWord() {
+            const word = selectedLetters.join('');
+            const feedback = document.getElementById('feedback');
+            
+            if (word === currentWord) {
+                feedback.textContent = 'Правилно! Браво!';
+                feedback.className = 'feedback correct';
+                score += 20;
+            } else {
+                feedback.textContent = 'Грешно! Опитайте отново.';
+                feedback.className = 'feedback incorrect';
+                score = Math.max(0, score - 5);
+            }
+            document.getElementById('score').textContent = score;
+        }
+
+        function showHint() {
+            const emptySlotIndex = selectedLetters.findIndex(letter => !letter);
+            if (emptySlotIndex !== -1) {
+                const hintLetter = currentWord[emptySlotIndex];
+                const availableIndex = availableLetters.findIndex(letter => letter === hintLetter);
+                if (availableIndex !== -1) {
+                    selectedLetters[emptySlotIndex] = hintLetter;
+                    availableLetters[availableIndex] = '';
+                    updateWordDisplay();
+                    updateLettersContainer();
+                    score = Math.max(0, score - 10);
+                    document.getElementById('score').textContent = score;
+                }
+            }
+        }
+
+        function resetGame() {
+            score = 0;
+            document.getElementById('score').textContent = score;
+            startNewWord();
+        }
+
+        function startNewWord() {
+            currentWord = getRandomWord();
+            selectedLetters = new Array(currentWord.length).fill('');
+            availableLetters = shuffleArray([...currentWord]);
+            document.getElementById('feedback').textContent = '';
+            document.getElementById('feedback').className = 'feedback';
+            updateWordDisplay();
+            updateLettersContainer();
+        }
+
+        document.getElementById('checkButton').onclick = checkWord;
+        document.getElementById('hintButton').onclick = showHint;
+        document.getElementById('nextButton').onclick = startNewWord;
+        document.getElementById('resetButton').onclick = resetGame;
+
+        startNewWord();
+
+        const fontSwitcher = document.getElementById('fontSwitcher');
+        const body = document.body;
+        
+        const savedFont = localStorage.getItem('dyslexicFont');
+        if (savedFont === 'true') {
+            body.classList.add('dyslexic-font');
+        }
+
+        fontSwitcher.addEventListener('click', () => {
+            body.classList.toggle('dyslexic-font');
+            localStorage.setItem('dyslexicFont', body.classList.contains('dyslexic-font'));
+        });
+    </script>
+</body>
+</html>
